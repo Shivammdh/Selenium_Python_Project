@@ -6,10 +6,12 @@ from selenium.webdriver.support.select import Select
 
 
 #initialize webdriver
-options = webdriver.ChromeOptions()
-options.add_argument("--headless=new")
-options.add_argument('--no-sandbox')
-driver = webdriver.Chrome(options=options)
+options1 = webdriver.ChromeOptions()
+options1.add_argument("disable-infobars")
+options1.add_argument("--disable-extensions")
+options1.add_argument('--headless')
+options1.add_argument('--no-sandbox')
+driver = webdriver.Chrome(options=options1)
 
 #Open URL and maximize window
 driver.get('http://tutorialsninja.com/demo/')
