@@ -6,7 +6,9 @@ from selenium.webdriver.support.select import Select
 
 
 #initialize webdriver
-driver=webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.add_argument("--headless=new")
+driver = webdriver.Chrome(options=options)
 
 #Open URL and maximize window
 driver.get('http://tutorialsninja.com/demo/')
